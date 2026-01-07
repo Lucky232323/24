@@ -1,0 +1,350 @@
+{
+  "entities": {
+    "UserProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProfile",
+      "type": "object",
+      "description": "Represents a user profile in the RIDER APP.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user profile."
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "User's mobile phone number.",
+          "format": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "User's full name."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "gender": {
+          "type": "string",
+          "description": "User's gender identity."
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "description": "User's date of birth.",
+          "format": "date-time"
+        },
+        "emergencyContactName": {
+          "type": "string",
+          "description": "Name of the user's emergency contact."
+        },
+        "emergencyContactPhone": {
+          "type": "string",
+          "description": "Phone number of the user's emergency contact."
+        }
+      },
+      "required": [
+        "id",
+        "phoneNumber"
+      ]
+    },
+    "CaptainProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "CaptainProfile",
+      "type": "object",
+      "description": "Represents a captain's profile in the CAPTAIN APP.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the captain profile."
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "Captain's mobile phone number.",
+          "format": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "Captain's full name."
+        },
+        "email": {
+          "type": "string",
+          "description": "Captain's email address.",
+          "format": "email"
+        },
+        "gender": {
+          "type": "string",
+          "description": "Captain's gender identity."
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "description": "Captain's date of birth.",
+          "format": "date-time"
+        },
+        "vehicleType": {
+          "type": "string",
+          "description": "Type of vehicle used by the captain (e.g., Bike, Auto, Cab)."
+        },
+        "drivingLicenseImage": {
+          "type": "string",
+          "description": "URL of the captain's driving license image."
+        },
+        "vehicleRcImage": {
+          "type": "string",
+          "description": "URL of the captain's vehicle registration certificate image."
+        },
+        "captainPhoto": {
+          "type": "string",
+          "description": "URL of the captain's profile photo."
+        },
+        "vehiclePhoto": {
+          "type": "string",
+          "description": "URL of the captain's vehicle photo."
+        },
+        "isOnline": {
+            "type": "boolean",
+            "description": "Whether the captain is currently online and available for rides."
+        },
+        "location": {
+            "type": "object",
+            "description": "The captain's current geographical location.",
+            "properties": {
+                "latitude": { "type": "number" },
+                "longitude": { "type": "number" }
+            }
+        },
+        "status": {
+            "type": "string",
+            "description": "The captain's approval status.",
+            "enum": ["pending", "approved", "blocked"]
+        }
+      },
+      "required": [
+        "id",
+        "phoneNumber",
+        "vehicleType",
+        "status"
+      ]
+    },
+    "Ride": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Ride",
+      "type": "object",
+      "description": "Represents a ride requested through the RIDER APP.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the ride."
+        },
+        "riderId": {
+          "type": "string",
+          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N Ride)"
+        },
+        "captainId": {
+          "type": "string",
+          "description": "Reference to CaptainProfile. (Relationship: CaptainProfile 1:N Ride)"
+        },
+        "pickupLocation": {
+          "type": "string",
+          "description": "Pickup location for the ride."
+        },
+        "dropLocation": {
+          "type": "string",
+          "description": "Drop-off location for the ride."
+        },
+        "status": {
+          "type": "string",
+          "description": "Current status of the ride (e.g., Pending, Accepted, InProgress, Completed, Cancelled)."
+        },
+        "estimatedFare": {
+          "type": "number",
+          "description": "Estimated fare for the ride."
+        },
+        "actualFare": {
+          "type": "number",
+          "description": "Actual fare for the ride after completion."
+        },
+        "startTime": {
+          "type": "string",
+          "description": "Timestamp indicating when the ride started.",
+          "format": "date-time"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "Timestamp indicating when the ride ended.",
+          "format": "date-time"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "description": "The user's chosen form of payment for the ride (e.g., cash, credit, wallet)."
+        },
+        "driverRating": {
+          "type": "number",
+          "description": "The rating provided by the Rider upon completion of the ride."
+        },
+        "captainLocation": {
+            "type": "object",
+            "description": "The captain's live location during an active ride.",
+            "properties": {
+                "latitude": { "type": "number" },
+                "longitude": { "type": "number" }
+            }
+        }
+      },
+      "required": [
+        "id",
+        "riderId",
+        "pickupLocation",
+        "dropLocation",
+        "status",
+        "estimatedFare"
+      ]
+    },
+    "AdminPanel": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "AdminPanel",
+      "type": "object",
+      "description": "Represent admin users and authentication for admin web panel.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Admin Profile."
+        },
+        "email": {
+          "type": "string",
+          "description": "Admin's email address.",
+          "format": "email"
+        }
+      },
+      "required": [
+        "id",
+        "email"
+      ]
+    },
+    "Message": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Message",
+      "type": "object",
+      "description": "Represents a single chat message within a ride.",
+      "properties": {
+        "rideId": {
+          "type": "string",
+          "description": "The ID of the ride this message belongs to."
+        },
+        "senderId": {
+          "type": "string",
+          "description": "The UID of the user who sent the message."
+        },
+        "senderRole": {
+          "type": "string",
+          "description": "The role of the sender (rider or captain).",
+          "enum": ["rider", "captain"]
+        },
+        "text": {
+          "type": "string",
+          "description": "The text content of the message."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "The server timestamp when the message was created.",
+          "format": "date-time"
+        }
+      },
+      "required": ["rideId", "senderId", "senderRole", "text", "timestamp"]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/userProfiles/{userId}",
+        "definition": {
+          "entityName": "UserProfile",
+          "schema": {
+            "$ref": "#/backend/entities/UserProfile"
+          },
+          "description": "Stores user profiles. Follows path-based ownership for user data.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/captainProfiles/{captainId}",
+        "definition": {
+          "entityName": "CaptainProfile",
+          "schema": {
+            "$ref": "#/backend/entities/CaptainProfile"
+          },
+          "description": "Stores captain profiles. Follows path-based ownership for captain data.",
+          "params": [
+            {
+              "name": "captainId",
+              "description": "The unique identifier of the captain."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/rides/{rideId}",
+        "definition": {
+          "entityName": "Ride",
+          "schema": {
+            "$ref": "#/backend/entities/Ride"
+          },
+          "description": "Stores ride information. Includes denormalized 'riderId' and 'captainId' for authorization independence.",
+          "params": [
+            {
+              "name": "rideId",
+              "description": "The unique identifier of the ride."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/rides/{rideId}/messages/{messageId}",
+        "definition": {
+          "entityName": "Message",
+          "schema": {
+            "$ref": "#/backend/entities/Message"
+          },
+          "description": "Stores chat messages for a specific ride.",
+          "params": [
+             {
+              "name": "rideId",
+              "description": "The unique identifier of the ride."
+            },
+            {
+              "name": "messageId",
+              "description": "The unique identifier of the message."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/adminPanel/{adminId}",
+        "definition": {
+          "entityName": "AdminPanel",
+          "schema": {
+            "$ref": "#/backend/entities/AdminPanel"
+          },
+          "description": "Stores admin user information. Existence of document grants admin privileges.",
+          "params": [
+            {
+              "name": "adminId",
+              "description": "The unique identifier of the administrator."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore data structure is designed to ensure authorization independence, clarity, and scalability for the Rapido-style RIDER APP, CAPTAIN APP, and ADMIN PANEL. It prioritizes DBAC (Database-Based Access Control) using `request.auth.uid` and avoids hierarchical authorization dependencies (`get()` calls). The design incorporates structural segregation for homogeneous security postures and uses consistent access modeling patterns.\n\n**Authorization Independence and QAPs:**\n*   **Denormalization:** The structure denormalizes authorization data (e.g., roles) into documents where needed. For example, if `Ride` documents need to be accessible by specific admins, the admin UIDs could be copied into the `Ride` documents as a `members` map or an `adminRoles` array. This eliminates the need for `get()` calls to other collections to determine authorization.\n*   **Structural Segregation:** Each top-level collection (e.g., `userProfiles`, `captainProfiles`, `rides`, `adminPanel`) has distinct security requirements, enabling secure `list` operations. User-owned data is placed under the `/users/{userId}` path to easily enforce ownership rules.\n*   **Access Modeling:**\n    *   Private User Data: `/userProfiles/{userId}` and `/captainProfiles/{captainId}` follow path-based ownership.\n    *   Collaborative Data: If certain `Ride` documents needed to be accessed by multiple users (e.g., support staff), a `members` map could be added to the `Ride` document.\n    *   Global Roles (DBAC): The `/adminPanel/{adminId}` collection provides existence-based access control for admin users.\n\n**Explanation of QAPs Support:**\n*   Since we avoid `get()` calls in security rules and denormalize security attributes, list operations are secured without requiring filtering based on potentially untrusted client data. Secure list operations are crucial for QAPs (Rules are not Filters).\n*   Path-based ownership (e.g., `/users/{userId}/rides/{rideId}`) allows listing rides securely for a specific user without needing to filter based on `request.auth.uid`.\n\n**Invariants Support:**\nThe structure enables the enforcement of invariants:\n*   Ownership: Path-based ownership makes enforcing ownership invariants straightforward in the rules.\n*   Timestamps: `startTime` and `endTime` can be validated in rules to ensure logical consistency.\n*   Data Integrity: Denormalization strategy enables the enforcement of the integrity of denormalized data (e.g., the `members` map in the `/rides/{rideId}` collection) in the rules."
+  }
+}

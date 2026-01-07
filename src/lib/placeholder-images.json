@@ -1,0 +1,88 @@
+{
+  "placeholderImages": [
+    {
+      "id": "rider-app-logo",
+      "description": "Logo for the RIDER APP, featuring a stylized bike icon.",
+      "imageUrl": "https://images.unsplash.com/photo-1762012507752-6322e96f92e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb3RvcmN5Y2xlJTIwbG9nb3xlbnwwfHx8fDE3NjU3OTc3NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "motorcycle logo"
+    },
+    {
+      "id": "captain-photo",
+      "description": "A portrait of a friendly-looking person to be used as a captain's photo.",
+      "imageUrl": "https://images.unsplash.com/photo-1660054031395-3c01627e8842?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjU3NjU4OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait person"
+    },
+    {
+      "id": "service-bike",
+      "description": "An image representing the bike taxi service.",
+      "imageUrl": "https://images.unsplash.com/photo-1659484789150-7d9e164cf8a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb3RvcmN5Y2xlJTIwZGVsaXZlcnl8ZW58MHx8fHwxNzY1Nzk3NzcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "motorcycle delivery"
+    },
+    {
+      "id": "service-auto",
+      "description": "An image representing the auto-rickshaw service.",
+      "imageUrl": "https://images.unsplash.com/photo-1626149637281-4e227308da18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhdXRvJTIwcmlja3NoYXd8ZW58MHx8fHwxNzY1Nzk3NzcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "auto rickshaw"
+    },
+    {
+      "id": "service-cab",
+      "description": "An image representing the cab service.",
+      "imageUrl": "https://images.unsplash.com/photo-1612867754336-c45d074c4f8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0YXhpJTIwY2FifGVufDB8fHx8MTc2NTc5Nzc3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "taxi cab"
+    },
+    {
+      "id": "refer-earn-illustration",
+      "description": "An illustration for the refer and earn page, showing people and gift boxes.",
+      "imageUrl": "https://images.unsplash.com/photo-1670731387414-3fdffa78d577?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnaWZ0JTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2NTc5Nzc3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gift illustration"
+    },
+    {
+      "id": "power-pass-ticket",
+      "description": "An image of a golden ticket for the Power Pass feature.",
+      "imageUrl": "https://images.unsplash.com/photo-1761747874830-136049dc2061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnb2xkZW4lMjB0aWNrZXR8ZW58MHx8fHwxNzY1Nzk3NzcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "golden ticket"
+    },
+    {
+      "id": "rating-illustration",
+      "description": "An illustration showing a large star and people, for the My Rating page.",
+      "imageUrl": "https://images.unsplash.com/photo-1753778366951-9438217a3666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdGFyJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2NTc5Nzc3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "star illustration"
+    },
+    {
+      "id": "rider-coin",
+      "description": "An illustration of a floating coin for the RIDER APP Coins page.",
+      "imageUrl": "https://images.unsplash.com/photo-1763929025980-8e276e8d0fa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2luJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2NTc5Nzc3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coin illustration"
+    },
+    {
+      "id": "gpay-logo",
+      "description": "Logo for Google Pay (GPay).",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/2560px-Google_Pay_Logo.svg.png",
+      "imageHint": "google pay logo"
+    },
+    {
+      "id": "phonepe-logo",
+      "description": "Logo for PhonePe.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/PhonePe_Logo.svg",
+      "imageHint": "phonepe logo"
+    },
+    {
+      "id": "cred-logo",
+      "description": "Logo for CRED.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/CRED_logo.svg",
+      "imageHint": "cred logo"
+    },
+    {
+      "id": "samsung-wallet-logo",
+      "description": "Logo for Samsung Wallet.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Samsung_Wallet_logo.svg/2560px-Samsung_Wallet_logo.svg.png",
+      "imageHint": "samsung wallet logo"
+    },
+    {
+      "id": "simpl-logo",
+      "description": "Logo for Simpl.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Simpl_logo.svg/2560px-Simpl_logo.svg.png",
+      "imageHint": "simpl logo"
+    }
+  ]
+}
